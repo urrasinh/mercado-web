@@ -1,13 +1,15 @@
-<div class="card w-25 my-5 mx-5">
-    <div class="card text-center">
-        <div class="card-header">
-           {{productos.nombre}}
-        </div>
-        <div class="card-body">
-{{productos.ruta}}
-        </div>
-        <div class="card-footer text-muted">
-            <a href="#" class="btn btn-primary">Comprar Ahora</a>
+<div class="container">
+    <div class="card w-20 my-5 mx-5">
+        <div class="card text-center">
+            <div class="card-header">
+                <h5 class="card-title">{{productos.nombre}}</h5>
+            </div>
+            <div class="card-body">
+                <img src="{{productos.ruta}}" class="card-img-top" alt="...">
+            </div>
+            <div class="card-footer text-muted">
+                <a href="#" class="btn btn-primary">Comprar Ahora</a>
+            </div>
         </div>
     </div>
 </div>
