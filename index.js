@@ -39,35 +39,11 @@ app.get('/', async (req, res) => {
     console.log(resultados.rows)
     const resultadosRows = resultados.rows
     const mapeoFrutas = resultadosRows.map((elemento) => {
-        let ruta
-        const nombre = elemento.nombre
         const id = elemento.id
-        switch (elemento.id) {
-            case 1:
-                ruta = '/banana.png'
-                break;
-            case 2:
-                ruta = '/cebollas.png'
-                break;
-            case 3:
-                ruta = '/lechuga.png'
-                break;
-            case 4:
-                ruta = '/papas.png'
-                break;
-            case 5:
-                ruta = '/pimenton.png'
-                break;
-            case 6:
-                ruta = '/tomate.png'
-                break;
-            default:
-                console.log('no encontrado')
-
-        }
-        return { nombre, ruta, id }
+        const nombre = elemento.nombre
+        const ruta = elemento.img
+            return { id, nombre, ruta }
     })
-
     res.render('dashboard', {
         layout: 'dashboard',
         frutas: mapeoFrutas
